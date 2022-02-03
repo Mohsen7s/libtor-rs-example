@@ -27,7 +27,7 @@ jobs:
     strategy:
       matrix:
         channel: [stable, beta]
-        features: ["", "vendored-lzma,vendored-zstd"]
+        features: [""]
 
   macos:
     runs-on: macos-latest
@@ -55,7 +55,7 @@ jobs:
       matrix:
         channel: [stable, beta]
         # always build at least with `vendored-openssl` for macOS/iOS
-        features: ["vendored-openssl", "vendored-openssl,vendored-lzma,vendored-zstd"]
+        features: [""]
         target:
           - x86_64-apple-darwin
           - aarch64-apple-ios
@@ -88,7 +88,7 @@ jobs:
       matrix:
         channel: [stable, beta]
         # always build at least with `vendored-openssl` for NDK
-        features: ["vendored-openssl", "vendored-openssl,vendored-lzma,vendored-zstd"]
+        features: [""]
         target:
           - aarch64-linux-android
           - armv7-linux-androideabi
@@ -121,7 +121,7 @@ jobs:
       matrix:
         channel: [stable, beta]
         # always build at least with `vendored-openssl` for MingW
-        features: ["vendored-openssl", "vendored-openssl,vendored-lzma,vendored-zstd"]
+        features: [""]
         target:
           - i686-pc-windows-gnu
           - x86_64-pc-windows-gnu
